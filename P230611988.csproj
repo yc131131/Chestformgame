@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{369C2CE0-05DD-4298-8966-02B6365BCAD6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>P230611988</RootNamespace>
+    <AssemblyName>P230611988</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Aboard.cs" />
+    <Compile Include="Classes\Actor.cs" />
+    <Compile Include="Classes\Bajie.cs" />
+    <Compile Include="Classes\ErLangSheng.cs" />
+    <Compile Include="Classes\GameHistory.cs" />
+    <Compile Include="Classes\GameState.cs" />
+    <Compile Include="Classes\HeiXiong.cs" />
+    <Compile Include="Classes\HongHaiEr.cs" />
+    <Compile Include="Classes\MainGame.cs" />
+    <Compile Include="Classes\Map.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\TangSeng.cs" />
+    <Compile Include="Classes\TurnManager.cs" />
+    <Compile Include="Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\StartForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\StartForm1.Designer.cs">
+      <DependentUpon>StartForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StartForm1.resx">
+      <DependentUpon>StartForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\form\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel-015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel-009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel-border-001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel-border-000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00046-3726076708-journey to the West chinese mythology of WuKong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msesage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msesageyourturn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msesageAllyTurn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msesageEnemyTurn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msesageyour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00047-3103295306-journey to the West chinese mythology of WuKong _lora_svportrait64-v1_0.8_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Log\TextFile1.txt" />
+    <None Include="Resources\heart-export1.png" />
+    <None Include="Resources\heart.png" />
+    <None Include="Resources\breath-export.png" />
+    <None Include="Resources\Sprite-0001.png" />
+    <None Include="Resources\Sprite-0001-export.png" />
+    <None Include="Resources\R.jpg" />
+    <None Include="Resources\OIP.jpg" />
+    <None Include="Resources\OIP %281%29.jpg" />
+    <None Include="Resources\8ctO8wtDKt6.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
