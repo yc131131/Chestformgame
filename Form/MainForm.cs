@@ -51,7 +51,7 @@ namespace P230611988
             {
                 Image = Resources.heart,
                 BackColor = Color.Transparent,
-                Size = new Size(40, 40),
+                Size = new Size(100, 100),
                 Visible = false,
                 SizeMode= PictureBoxSizeMode.StretchImage,
             };
@@ -61,7 +61,7 @@ namespace P230611988
             {
                 Image = Resources.heart_export1,
                 BackColor = Color.Transparent,
-                Size = new Size(40,40),
+                Size = new Size(100,100),
                 Visible=false,
                 SizeMode = PictureBoxSizeMode.StretchImage,
 
@@ -87,7 +87,7 @@ namespace P230611988
             PlayerSkillInfoLabel = new Label()
             {
                 Location = new Point(10, 320),
-                Size = new Size(300, 50),
+                Size = new Size(300, 200),
                 Visible = false,
                 ForeColor = Color.White,
                 BackColor = Color.Transparent,
@@ -196,9 +196,11 @@ namespace P230611988
             // 设置 PictureBox 边框为 3D 风格
             _playerPictureBox.BorderStyle = BorderStyle.Fixed3D;
 
-            PlayerSkillInfoLabel.Text = "Q:筋斗云" +
-                "W:金箍棒" +
-                "E:打坐"+
+            PlayerSkillInfoLabel.Text = $"HP:{game._actors[0].HP}\n" +
+                $"DamageAmount:{game._actors[0].DamageAmount}\n" +
+                "Q:筋斗云" +"\n"+
+                "W:金箍棒" +"\n"+
+                "E:打坐"+"\n"+
                 "R:修行";
             PlayerSkillInfoLabel.Visible = true;
             
@@ -272,6 +274,5 @@ namespace P230611988
                 _aboard.PictureBoxAttackRangeShow(e.Location);
             }
         }
-
     }
 }

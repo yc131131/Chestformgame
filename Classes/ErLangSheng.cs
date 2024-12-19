@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace P230611988.Classes
@@ -26,6 +27,8 @@ namespace P230611988.Classes
             this.FMoveTwords(game.FindClosestActor(this, 1));//远离敌人
             game.GetAboard().UpdateActorPosition(this, this.PositionY, this.PositionX);
             this.HP += 10;
+            MessageBox.Show("二郎神远离敌人,治愈了自己10点HP");
+            //game.GetAboard().SetLabelText("二郎神远离敌人,治愈了自己10点HP");
         }
     }
 }

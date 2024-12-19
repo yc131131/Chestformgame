@@ -70,7 +70,7 @@ namespace P230611988
 
 
                 //进一步等待操作
-                await Task.Delay(7000);
+                await Task.Delay(6000);
                 //allyturn
                 _turnManager.NextTurn();
                 ActionActor(_actors[1]);
@@ -81,7 +81,7 @@ namespace P230611988
                 ActionActor(_actors[3]);
                 ActionActor(_actors[4]);
                 ActionActor(_actors[5]);
-                await Task.Delay(7000);
+                await Task.Delay(6000);
                 _isInputEnabled = true;
                 _isInputFinished = false;
                 _turnManager.NextTurn();
@@ -121,7 +121,7 @@ namespace P230611988
                     break;
                 case Keys.W:
                     //Attack
-                    MessageBox.Show("Attack");
+                    MessageBox.Show("攻击已启用");
 
 
                     _isAttackEnabled = true;
@@ -130,11 +130,15 @@ namespace P230611988
                     _aboard.AHealPictureBoxShow(_actors[0]);
                     _actors[0].HP += 10;
                     _isInputFinished = true;
+                    _mainForm.PlayerSkillInfoLabel.Visible = false;
+                    MessageBox.Show("孙悟空治愈了自己10点HP");
                     break;
                 case Keys.R:
                     _aboard.PBuffPictureBoxShow(_actors[0]);
                     _actors[0].DamageAmount += 5;
                     _isInputFinished = true;
+                    _mainForm.PlayerSkillInfoLabel.Visible = false;
+                    MessageBox.Show("孙悟空提升了自己5点攻击力");
                     break;
                 default:
 

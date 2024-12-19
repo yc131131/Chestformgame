@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace P230611988.Classes
 {
@@ -24,7 +25,8 @@ namespace P230611988.Classes
             base.PassiveSkill(sender);
 
             this.HP += 15;
-
+            //game.GetAboard().SetLabelText("八戒治愈了自己15点HP");
+            MessageBox.Show("八戒治愈了自己15点HP");
         }
     }
 }

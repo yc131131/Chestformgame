@@ -295,19 +295,25 @@ namespace P230611988.Classes
         {
             for (int i = 0;i<3;i++)
             {
-                _mainForm._AHealPictureBox.Location = new Point(actor.PositionY * 53, actor.PositionX * 50 + 10);
+                _mainForm._AHealPictureBox.Location = new Point(actor.PositionY * 53, actor.PositionX * 50-10);
                 _mainForm._AHealPictureBox.Visible= true;
-                await Task.Delay(50);
+                await Task.Delay(100);
                 _mainForm._AHealPictureBox.Visible = false;
             }
         }
 
         public async void PBuffPictureBoxShow(Actor actor)
         {
-            _mainForm._PBuffPictureBox.Location = new Point(actor.PositionY * 53, actor.PositionX * 50 + 10);
+            _mainForm._PBuffPictureBox.Location = new Point(actor.PositionY * 53, actor.PositionX * 50-10);
             _mainForm._PBuffPictureBox.Visible = true;
-            await Task.Delay(50);
+            await Task.Delay(100);
             _mainForm._PBuffPictureBox.Visible = false;
         }
+
+        //public async void SetLabelText(string text)
+        //{
+        //    _mainForm.label1.Text = text;
+        //    await Task.Delay(100);
+        //}
     }
 }

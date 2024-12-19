@@ -57,12 +57,13 @@ namespace P230611988
             if (HP > 0)
             {
                 OnDamageTaken?.Invoke(this);
+                //game.GetAboard().SetLabelText($"{this.Name}收到了{damage}点伤害");
             }
             else
             {
                 IsAlive = false;
             }
-            MessageBox.Show("damaged");
+            MessageBox.Show($"{this.Name}收到了{damage}点伤害，还剩{this.HP}生命值");
         }
 
 
@@ -73,7 +74,7 @@ namespace P230611988
 
         public virtual void PassiveSkill(Actor sender)
         {
-
+            
         }
         //form中 根据e计算 
         //0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 Y-> 

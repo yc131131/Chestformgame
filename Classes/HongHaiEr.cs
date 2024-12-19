@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace P230611988.Classes
 {
@@ -23,6 +24,8 @@ namespace P230611988.Classes
             base.PassiveSkill(sender);
 
             this.DealDamageInSurroundingArea();
+            //game.GetAboard().SetLabelText("红孩儿再次造成了攻击");
+            MessageBox.Show("红孩儿再次造成了攻击");
         }
 
     }

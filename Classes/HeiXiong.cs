@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace P230611988.Classes
 {
@@ -23,6 +24,8 @@ namespace P230611988.Classes
         {
             base.PassiveSkill(sender);
             this.Defension += 1;
+            //game.GetAboard().SetLabelText("黑熊增加了自己一点防御");
+            MessageBox.Show("黑熊增加了自己一点防御");
         }
     }
 }
