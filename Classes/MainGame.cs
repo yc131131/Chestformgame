@@ -75,13 +75,17 @@ namespace P230611988
                 _turnManager.NextTurn();
                 ActionActor(_actors[1]);
                 ActionActor(_actors[2]);
-                await Task.Delay(6000);
+                if(!(_actors[3].IsAlive || _actors[4].IsAlive || _actors[5].IsAlive))
+                    MessageBox.Show("胜利");
+                //await Task.Delay(6000);
                 //enemyturn
                 _turnManager.NextTurn();
                 ActionActor(_actors[3]);
                 ActionActor(_actors[4]);
                 ActionActor(_actors[5]);
-                await Task.Delay(6000);
+                if(_actors[0].HP <= 0)
+                    MessageBox.Show("失败");
+                await Task.Delay(3000);
                 _isInputEnabled = true;
                 _isInputFinished = false;
                 _turnManager.NextTurn();

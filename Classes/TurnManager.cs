@@ -53,25 +53,5 @@ namespace P230611988.Classes
             _aboard.StartTurnMessageEffect(_currentPhase);
             
         }
-
-        public void PerformAction(Actor actor, IAction action)
-        {
-            if (IsCorrectTurn(actor))
-            {
-                action.Execute();
-                _gameHistory.RecordState(new GameState(_actors, _gameHistory));  // 记录操作
-                NextTurn();
-            }
-        }
-
-        private bool IsCorrectTurn(Actor actor)
-        {
-            if (_currentPhase == TurnPhase.PlayerTurn && actor is Player) return true;
-            //if (_currentPhase == TurnPhase.AllyTurn && actor is AllyCharacter) return true;
-            //if (_currentPhase == TurnPhase.EnemyTurn && actor is EnemyCharacter) return true;
-            return false;
-        }
-
-       
     }
 }

@@ -70,10 +70,10 @@ namespace P230611988
                 if (attackrangey == 0)  // 如果是水平方向的攻击
                 {
                     // 判断目标角色是否在攻击范围内
-                    if (this.PositionY == actor.PositionY) // 确保在同一水平线上
+                    if (this.PositionX == actor.PositionX) // 确保在同一水平线上
                     {
-                        if ((this.PositionX + attackrangex >= actor.PositionX && actor.PositionX >= this.PositionX) ||
-                            (this.PositionX + attackrangex <= actor.PositionX && actor.PositionX <= this.PositionX))
+                        if ((this.PositionY + attackrangex >= actor.PositionY && actor.PositionY >= this.PositionY) ||
+                            (this.PositionY + attackrangex <= actor.PositionY && actor.PositionY <= this.PositionY))
                         {
                             Attack(actor, this.DamageAmount);
                         }
@@ -82,10 +82,10 @@ namespace P230611988
                 else  // 垂直方向的攻击
                 {
                     // 判断目标角色是否在攻击范围内
-                    if (this.PositionX == actor.PositionX) // 确保在同一垂直线上
+                    if (this.PositionY == actor.PositionY) // 确保在同一垂直线上
                     {
-                        if ((this.PositionY + attackrangey >= actor.PositionY && actor.PositionY >= this.PositionY) ||
-                            (this.PositionY + attackrangey <= actor.PositionY && actor.PositionY <= this.PositionY))
+                        if ((this.PositionX + attackrangey >= actor.PositionX && actor.PositionX >= this.PositionX) ||
+                            (this.PositionX + attackrangey <= actor.PositionX && actor.PositionX <= this.PositionX))
                         {
                             Attack(actor, this.DamageAmount);
                         }

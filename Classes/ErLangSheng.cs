@@ -19,6 +19,7 @@ namespace P230611988.Classes
             this.Type = 1;
             this.PositionX = 3;
             this.PositionY = 17;
+            this.game = game;
         }
 
         public override void PassiveSkill(Actor sender)
@@ -26,8 +27,8 @@ namespace P230611988.Classes
             base.PassiveSkill(sender);
             this.FMoveTwords(game.FindClosestActor(this, 1));//远离敌人
             game.GetAboard().UpdateActorPosition(this, this.PositionY, this.PositionX);
-            this.HP += 10;
-            MessageBox.Show("二郎神远离敌人,治愈了自己10点HP");
+            this.HP += 5;
+            MessageBox.Show("二郎神移动,治愈了自己5点HP");
             //game.GetAboard().SetLabelText("二郎神远离敌人,治愈了自己10点HP");
         }
     }

@@ -53,7 +53,10 @@ namespace P230611988
 
         public void TakeDamage(int damage)
         {
-            HP -= (damage-Defension);
+            int Damage = (damage - Defension) >= 0 ? damage - Defension : 0;
+            HP -= Damage;
+
+            MessageBox.Show($"{this.Name}收到了{Damage}点伤害，还剩{this.HP}生命值");
             if (HP > 0)
             {
                 OnDamageTaken?.Invoke(this);
@@ -63,7 +66,7 @@ namespace P230611988
             {
                 IsAlive = false;
             }
-            MessageBox.Show($"{this.Name}收到了{damage}点伤害，还剩{this.HP}生命值");
+            
         }
 
 
